@@ -12,7 +12,7 @@ app.get("/", (req,res) => {
 });
 
 app.get("/joke", async (req,res) => {
-    const response = await axios.get(URL+"joke/Dark");
+    const response = await axios.get(URL+"joke/Any");
     console.log(response.data);
     if(response.data.type == "single"){
         res.render("index.ejs", {joke: response.data.joke});
